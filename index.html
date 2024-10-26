@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Clubes Deportivos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px; /* Espacio reducido entre columnas */
+            margin-bottom: 20px;
+        }
+        .form-container label {
+            flex: 1 0 45%;
+            margin-bottom: 0; /* Sin espacio debajo de los labels */
+        }
+        .form-container input {
+            flex: 1 0 45%;
+            padding: 4px; /* Menor padding en los inputs */
+            margin-bottom: 10px; /* Espacio controlado entre inputs */
+        }
+        .single-column {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Añadir Club Deportivo</h2>
+<form id="form-anadir" method="POST">
+    <div class="form-container">
+        <label for="nombre">Nombre del Club:</label>
+        <input id="nombre" type="text" class="entrada" name="nombre" required>
+
+        <label for="calle">Calle:</label>
+        <input id="calle" type="text" class="entrada" name="calle" required>
+
+        <label for="numero">Número:</label>
+        <input id="numero" type="text" class="entrada" name="numero" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input id="ciudad" type="text" class="entrada" name="ciudad" required>
+
+        <label for="codigo">Código Postal:</label>
+        <input id="codigo" type="text" class="entrada" name="codigoPostal" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input id="telefono" type="text" class="entrada" name="telefono" required>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" class="entrada" name="email" required>
+
+        <label for="fecha">Fecha de Fundación:</label>
+        <input id="fecha" type="date" class="entrada" name="fechaFundacion" required>
+
+        <label for="deportes">Deportes:</label>
+        <input id="deportes" type="text" class="entrada" name="deportes" required>
+
+        <label for="imagen">URL de la Imagen:</label>
+        <input id="imagen" type="text" class="entrada" name="imagen" required>
+    </div>
+    <input type="submit" value="Añadir Club">
+</form>
+
+<h2>Eliminar Club Deportivo</h2>
+<form id="form-eliminar" class="single-column">
+    <label for="nombre">Nombre del Club:</label>
+    <input id="nombre" type="text" class="entrada" name="nombre-eliminar" required>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" class="entrada" name="email-eliminar" required>
+
+    <input type="submit" value="Eliminar Club">
+
+    <div id="mostrar"></div>
+</form>
+
+<script src="main.js"></script>
+</body>
+</html>
